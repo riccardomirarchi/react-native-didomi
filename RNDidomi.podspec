@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNDidomi"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "RNDidomi"
   s.description  = <<-DESC
                   didomi integration for gdpr
@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/riccardomirarchi/react-native-didomi.git", :tag => "master" }
+  s.source       = { :git => "https://github.com/riccardomirarchi/react-native-didomi", :tag => "master" }
 
-  s.source_files  = "ios/**/*.{h,m}"
+  s.source_files  = "ios/*.{h,m}"
   s.requires_arc = true
 
 
