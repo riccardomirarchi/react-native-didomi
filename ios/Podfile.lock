@@ -1,0 +1,16 @@
+PODS:
+  - Didomi-XCFramework (1.31.1)
+
+DEPENDENCIES:
+  - Didomi-XCFramework (= 1.31.1)
+
+SPEC REPOS:
+  trunk:
+    - Didomi-XCFramework
+
+SPEC CHECKSUMS:
+  Didomi-XCFramework: 5e4944abfcc3ffc44679c9bc77985595e25034d8
+
+PODFILE CHECKSUM: c13a216adeb658c9d537face0a989e17a50f3f6e
+
+COCOAPODS: 1.9.3
