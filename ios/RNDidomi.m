@@ -21,8 +21,12 @@ RCT_EXPORT_METHOD(init: (NSString *)apiKey)
 
     [didomi onReadyWithCallback:^{
         // The Didomi SDK is ready to go, you can call other functions on the SDK
-        Didomi *didomi = [Didomi shared];
-           [didomi setupUIWithContainerController:[UIApplication sharedApplication].delegate.window.rootViewController];
+        dispatch_async(dispatch_get_main_queue(), ^{
+                // do work here to Usually to update the User Interface
+                Didomi *didomi = [Didomi shared];
+                [didomi setupUIWithContainerController:[UIApplication sharedApplication].delegate.window.rootViewController];
+        });
+
     }];
     }
     @catch(NSException *e) {
