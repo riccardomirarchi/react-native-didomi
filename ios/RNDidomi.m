@@ -23,6 +23,14 @@ RCT_EXPORT_METHOD(init: (NSString *)apiKey remoteUrl: (NSString *)url)
             providerId:nil
             disableDidomiRemoteConfig: (url != nil)
             languageCode:nil];
+    [didomi onReadyWithCallback:^{
+        // The Didomi SDK is ready to go, you can call other functions on the SDK
+        dispatch_async(dispatch_get_main_queue(), ^{
+                // do work here to Usually to update the User Interface
+                Didomi *didomi = [Didomi shared];
+                [didomi setupUIWithContainerController:[UIApplication sharedApplication].delegate.window.rootViewController];
+        });
+    }];
     }
     @catch(NSException *e) {
         NSLog(@"error initializing the didomi sdk %@", e);

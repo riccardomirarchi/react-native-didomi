@@ -26,17 +26,17 @@ public class RNDidomiModule extends ReactContextBaseJavaModule {
   	}
 
 	@ReactMethod
-	public void init(String apiKey) {
+	public void init(String apiKey, Sting remoteUrl) {
 		try {
 			Didomi.getInstance().setLogLevel(android.util.Log.DEBUG);
         	Didomi.getInstance().initialize(
                 this.reactContext.getCurrentActivity().getApplication(),
                 apiKey,
                 null,
+                remoteUrl,
                 null,
-                null,
-                false
-            );
+				remoteUrl == null
+			);
             
             // Do not use the Didomi.getInstance() object here for anything else than registering your ready listener
             // The SDK might not be ready yet
