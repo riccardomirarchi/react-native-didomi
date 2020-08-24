@@ -26,7 +26,7 @@ public class RNDidomiModule extends ReactContextBaseJavaModule {
   	}
 
 	@ReactMethod
-	public void init(String apiKey, Sting remoteUrl) {
+	public void init(String apiKey, String remoteUrl) {
 		try {
 			Didomi.getInstance().setLogLevel(android.util.Log.DEBUG);
         	Didomi.getInstance().initialize(
